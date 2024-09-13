@@ -1,4 +1,6 @@
-function AudioBlock ({src, name}) {
+import _ from 'lodash';
+
+function AudioBlock ({src}) {
     let audio = new Audio(src)
   
     const start = () => {
@@ -6,11 +8,11 @@ function AudioBlock ({src, name}) {
     }
   
     return (
-      <div>
+      <div className="text-center">
         <button
             onClick={start}
-            className="bg-sky-400 px-4 w-3/4 py-3 rounded rounded-md">
-                Play Sound of ({name})
+            className="bg-sky-400 px-4 w-2/3 py-3 rounded rounded-md">
+                Play Sound of this Pokemon!
             </button>
       </div>
     );

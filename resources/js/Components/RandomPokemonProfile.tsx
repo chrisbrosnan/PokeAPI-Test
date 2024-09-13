@@ -112,12 +112,8 @@ function PokemonProfile({ id }: { id: number }) {
                     </div>
                     <div className="right">
                         <div>
-                            <div className="text-center font-black pb-4 underline">
-                                Sounds:
-                            </div>
-                            <div className="text-center grid grid-cols-2">
+                            <div>
                                 <AudioBlock
-                                    name={pokemon.name}
                                     src={latest_cry}
                                 />
                             </div>

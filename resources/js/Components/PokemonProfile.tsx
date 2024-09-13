@@ -4,6 +4,7 @@ import _ from 'lodash';
 import AudioBlock from './AudioBlock';
 
 interface Pokemon {
+    name: string; 
     sprites: {
         front_default: string;
         front_shiny: string;
@@ -110,12 +111,8 @@ function PokemonProfile({ name }: { name: string }) {
                     </div>
                     <div className="right">
                         <div>
-                            <div className="text-center grid grid-cols-2">
-                                <div className="text-center font-black pb-4 underline">
-                                    Sound:
-                                </div>
+                            <div>
                                 <AudioBlock
-                                    name={name}
                                     src={latest_cry}
                                 />
                             </div>
