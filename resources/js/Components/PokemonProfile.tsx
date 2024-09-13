@@ -150,7 +150,7 @@ function PokemonProfile({ name }: { name: string }) {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="w-3/4 mx-auto">
                     <table className="w-full">
                         <tbody>
                             <tr className="py-3 mt-4 underline">
