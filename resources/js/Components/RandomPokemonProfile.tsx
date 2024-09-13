@@ -44,14 +44,12 @@ interface Pokemon {
 
 function PokemonProfile({ id }: { id: number }) {
     const [pokemon, getPokemon] = useState<Pokemon | null>(null);
-    const [legacy_cry, getLegacyCry] = useState('');
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/` + id)
             .then(response => {
                 getPokemon(response.data);
-                getLegacyCry(response.data.cries.legacy);
                 getLatestCry(response.data.cries.latest);
             })
             .catch(error => {
@@ -119,11 +117,7 @@ function PokemonProfile({ id }: { id: number }) {
                             </div>
                             <div className="text-center grid grid-cols-2">
                                 <AudioBlock
-                                    name="Legacy"
-                                    src={legacy_cry}
-                                />
-                                <AudioBlock
-                                    name="Latest"
+                                    name={pokemon.name}
                                     src={latest_cry}
                                 />
                             </div>

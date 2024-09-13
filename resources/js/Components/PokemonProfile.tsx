@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import _ from 'lodash';
-import useSound from 'use-sound';
 import AudioBlock from './AudioBlock';
 
 interface Pokemon {
@@ -43,14 +42,12 @@ interface Pokemon {
 
 function PokemonProfile({ name }: { name: string }) {
     const [pokemon, getPokemon] = useState<Pokemon | null>(null);
-    const [legacy_cry, getLegacyCry] = useState('');
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/` + name)
             .then(response => {
                 getPokemon(response.data);
-                getLegacyCry(response.data.cries.legacy);
                 getLatestCry(response.data.cries.latest);
             })
             .catch(error => {
@@ -113,16 +110,12 @@ function PokemonProfile({ name }: { name: string }) {
                     </div>
                     <div className="right">
                         <div>
-                            <div className="text-center font-black pb-4 underline">
-                                Sounds:
-                            </div>
                             <div className="text-center grid grid-cols-2">
+                                <div className="text-center font-black pb-4 underline">
+                                    Sound:
+                                </div>
                                 <AudioBlock
-                                    name="Legacy"
-                                    src={legacy_cry}
-                                />
-                                <AudioBlock
-                                    name="Latest"
+                                    name={name}
                                     src={latest_cry}
                                 />
                             </div>

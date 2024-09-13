@@ -10,7 +10,7 @@ function AudioBlock ({src, name}) {
         <button
             onClick={start}
             className="bg-sky-400 px-4 w-3/4 py-3 rounded rounded-md">
-                Play ({name})
+                Play Sound of ({name})
             </button>
       </div>
     );
