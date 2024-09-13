@@ -1,52 +1,52 @@
 {
-  "_AudioBlock-CRnAslP8.js": {
-    "file": "assets/AudioBlock-CRnAslP8.js",
+  "_AudioBlock-Bn8LBRfR.js": {
+    "file": "assets/AudioBlock-Bn8LBRfR.js",
     "name": "AudioBlock",
     "imports": [
       "resources/js/app.tsx"
     ]
   },
-  "_Footer-BCpcxfgb.js": {
-    "file": "assets/Footer-BCpcxfgb.js",
+  "_Footer-yWK751hC.js": {
+    "file": "assets/Footer-yWK751hC.js",
     "name": "Footer",
     "imports": [
       "resources/js/app.tsx"
     ]
   },
   "resources/js/Pages/Profile.tsx": {
-    "file": "assets/Profile-DWQB8TuG.js",
+    "file": "assets/Profile-MkbNggVs.js",
     "name": "Profile",
     "src": "resources/js/Pages/Profile.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_Footer-BCpcxfgb.js",
-      "_AudioBlock-CRnAslP8.js"
+      "_Footer-yWK751hC.js",
+      "_AudioBlock-Bn8LBRfR.js"
     ]
   },
   "resources/js/Pages/Random.tsx": {
-    "file": "assets/Random-C74nG1bR.js",
+    "file": "assets/Random-CHWaUBBJ.js",
     "name": "Random",
     "src": "resources/js/Pages/Random.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_Footer-BCpcxfgb.js",
-      "_AudioBlock-CRnAslP8.js"
+      "_Footer-yWK751hC.js",
+      "_AudioBlock-Bn8LBRfR.js"
     ]
   },
   "resources/js/Pages/Welcome.tsx": {
-    "file": "assets/Welcome-C0lNAmS2.js",
+    "file": "assets/Welcome-BcykPgLA.js",
     "name": "Welcome",
     "src": "resources/js/Pages/Welcome.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_Footer-BCpcxfgb.js"
+      "_Footer-yWK751hC.js"
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-Bp4QGcwN.js",
+    "file": "assets/app-D9ShccSe.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
