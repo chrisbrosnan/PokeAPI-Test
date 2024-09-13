@@ -71,7 +71,9 @@ function RandomPokemonProfile({ id }: { id: number }) {
                 <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                     <div className="left">
                         <div className="text-center">
-                            <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
+                            <picture>
+                                <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
+                            </picture>
                         </div>
                         <div>
                             <table className="mx-auto mb-4 w-2/3 rounded rounded-lg bg-sky-400 px-3">
@@ -164,16 +166,32 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <p>Front Default: <br /><img className="mx-auto" src={pokemon.sprites.front_default} alt={pokemon.name + ' front'} /></p>
+                                                    <p>Front Default: <br />
+                                                    <picture>
+                                                        <source srcSet={pokemon.sprites.front_default} type="image/webp" />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                    </picture></p>
                                                 </td>
                                                 <td>
-                                                    <p>Front Shiny: <br /><img className="mx-auto" src={pokemon.sprites.front_shiny} alt={pokemon.name + ' front (shiny)'} /></p>
+                                                    <p>Front Shiny: <br />
+                                                    <picture>
+                                                        <source srcSet={pokemon.sprites.front_shiny} type="image/webp" />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                    </picture></p>
                                                 </td>
                                                 <td>
-                                                    <p>Back Default: <br /><img className="mx-auto" src={pokemon.sprites.back_default} alt={pokemon.name + ' back'} /></p>
+                                                    <p>Back Default: <br />
+                                                    <picture>
+                                                        <source srcSet={pokemon.sprites.front_shiny} type="image/webp" />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                    </picture></p>
                                                 </td>
                                                 <td>
-                                                    <p>Back Shiny: <br /><img className="mx-auto" src={pokemon.sprites.back_shiny} alt={pokemon.name + 'back (shiny)'} /></p>
+                                                    <p>Back Shiny: <br />
+                                                    <picture>
+                                                        <source srcSet={pokemon.sprites.back_shiny} type="image/webp" />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                    </picture></p>
                                                 </td>
                                             </tr>
                                         </tbody>

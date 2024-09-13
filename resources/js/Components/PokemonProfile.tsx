@@ -162,16 +162,24 @@ function PokemonProfile({ name }: { name: string }) {
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <p>Front Default: <br /><img className="mx-auto" src={pokemon.sprites.front_default} alt={name + ' front'} /></p>
+                                                    <p>Front Default: <br />
+                                                    <source srcSet={pokemon.sprites.front_default} type="image/webp" />
+                                                    <img className="mx-auto" src="https://placehold.co/75x75" alt={name + ' front'} /></p>
                                                 </td>
                                                 <td>
-                                                    <p>Front Shiny: <br /><img className="mx-auto" src={pokemon.sprites.front_shiny} alt={name + ' front (shiny)'} /></p>
+                                                    <p>Front Shiny: <br />
+                                                    <source srcSet={pokemon.sprites.front_shiny} type="image/webp" />
+                                                    <img className="mx-auto" src="https://placehold.co/75x75" alt={name + ' front'} /></p>
                                                 </td>
                                                 <td>
-                                                    <p>Back Default: <br /><img className="mx-auto" src={pokemon.sprites.back_default} alt={name + ' back'} /></p>
+                                                    <p>Back Default: <br />
+                                                    <source srcSet={pokemon.sprites.back_default} type="image/webp" />
+                                                    <img className="mx-auto" src="https://placehold.co/75x75" alt={name + ' front'} /></p>
                                                 </td>
                                                 <td>
-                                                    <p>Back Shiny: <br /><img className="mx-auto" src={pokemon.sprites.back_shiny} alt={name + ' back (shiny)'} /></p>
+                                                    <p>Back Shiny: <br />
+                                                    <source srcSet={pokemon.sprites.back_shiny} type="image/webp" />
+                                                    <img className="mx-auto" src="https://placehold.co/75x75" alt={name + ' front'} /></p>
                                                 </td>
                                             </tr>
                                         </tbody>
