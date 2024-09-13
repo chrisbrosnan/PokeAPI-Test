@@ -1,63 +1,63 @@
 {
-  "_Footer-BBIkb_-j.js": {
-    "file": "assets/Footer-BBIkb_-j.js",
+  "_Footer-BFdQdA0I.js": {
+    "file": "assets/Footer-BFdQdA0I.js",
     "name": "Footer",
     "imports": [
       "resources/js/app.tsx"
     ]
   },
-  "_howler-DghuPoNX.js": {
-    "file": "assets/howler-DghuPoNX.js",
+  "_howler-DJ5zwTS2.js": {
+    "file": "assets/howler-DJ5zwTS2.js",
     "name": "howler",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx"
     ]
   },
-  "_use-sound.esm-D2P2zLnW.js": {
-    "file": "assets/use-sound.esm-D2P2zLnW.js",
+  "_use-sound.esm-CWWfqcgs.js": {
+    "file": "assets/use-sound.esm-CWWfqcgs.js",
     "name": "use-sound.esm",
     "imports": [
       "resources/js/app.tsx"
     ],
     "dynamicImports": [
-      "_howler-DghuPoNX.js"
+      "_howler-DJ5zwTS2.js"
     ]
   },
   "resources/js/Pages/Profile.tsx": {
-    "file": "assets/Profile-CjUU0OUi.js",
+    "file": "assets/Profile-B10NJN0_.js",
     "name": "Profile",
     "src": "resources/js/Pages/Profile.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_Footer-BBIkb_-j.js",
-      "_use-sound.esm-D2P2zLnW.js"
+      "_Footer-BFdQdA0I.js",
+      "_use-sound.esm-CWWfqcgs.js"
     ]
   },
   "resources/js/Pages/Random.tsx": {
-    "file": "assets/Random-CWNH5z27.js",
+    "file": "assets/Random-C5uuDT4E.js",
     "name": "Random",
     "src": "resources/js/Pages/Random.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_Footer-BBIkb_-j.js",
-      "_use-sound.esm-D2P2zLnW.js"
+      "_Footer-BFdQdA0I.js",
+      "_use-sound.esm-CWWfqcgs.js"
     ]
   },
   "resources/js/Pages/Welcome.tsx": {
-    "file": "assets/Welcome-Dur22iiR.js",
+    "file": "assets/Welcome-BCgvPMiI.js",
     "name": "Welcome",
     "src": "resources/js/Pages/Welcome.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_Footer-BBIkb_-j.js"
+      "_Footer-BFdQdA0I.js"
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-2cWGYOWI.js",
+    "file": "assets/app-Clhuj2sY.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,

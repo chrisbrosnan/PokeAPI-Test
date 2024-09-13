@@ -54,7 +54,6 @@ function PokemonProfile({ name }: { name: string }) {
                 getPokemon(response.data);
                 getLegacyCry(response.data.cries.legacy);
                 getLatestCry(response.data.cries.latest);
-                console.log(response.data);
             })
             .catch(error => {
                 console.error(error);
