@@ -73,7 +73,7 @@ function PokemonProfile({ id }: { id: number }) {
                             <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
                         </div>
                         <div>
-                            <table className="mx-auto mb-4 w-1/2 rounded rounded-m bg-sky-400 px-6">
+                            <table className="mx-auto mb-4 w-2/3 rounded rounded-lg bg-sky-400 px-3">
                                 <tbody>
                                     <tr>
                                         <td colSpan={2} className="px-6 pt-4 align-top font-black text-center underline">Stats:</td>
