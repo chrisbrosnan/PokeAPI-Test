@@ -70,21 +70,21 @@ function PokemonProfile({ id }: { id: number }) {
                 <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                     <div className="left">
                         <div className="text-center">
-                            <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
+                            <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
                         </div>
                         <div>
-                            <table className="mx-auto mb-4 w-3/4 rounded rounded-m bg-sky-400">
+                            <table className="mx-auto mb-4 w-1/2 rounded rounded-m bg-sky-400 px-6">
                                 <tbody>
                                     <tr>
-                                        <td colSpan={2} className="px-4 pt-4 align-top font-black text-center underline">Stats:</td>
+                                        <td colSpan={2} className="px-6 pt-4 align-top font-black text-center underline">Stats:</td>
                                     </tr>
                                     <tr>
-                                        <td className="px-3 align-top font-black pb-4 xs:text-xs">
+                                        <td className="px-6 align-top font-black pb-4 xs:text-xs">
                                             {pokemon.stats.map((item, index) => (
                                                 <p key={index}><em>{_.capitalize(item.stat.name)}</em></p>
                                             ))}
                                         </td>
-                                        <td className="px-3 align-top pb-4 xs:text-xs">
+                                        <td className="px-6 align-top pb-4 xs:text-xs">
                                             {pokemon.stats.map((item, index) => (
                                                 <p key={index}>{item.base_stat}</p>
                                             ))}
