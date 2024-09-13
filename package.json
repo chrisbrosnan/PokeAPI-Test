@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "lodash": "^4.17.21",
+        "react-h5-audio-player": "^3.9.3",
         "react-lazyload": "^3.2.1",
         "react-router-dom": "^6.26.2",
         "styled-components": "^6.1.13",

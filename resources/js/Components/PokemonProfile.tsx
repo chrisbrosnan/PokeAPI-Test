@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import _ from 'lodash';
 import useSound from 'use-sound';
+import AudioBlock from './AudioBlock';
 
 interface Pokemon {
     sprites: {
@@ -45,9 +46,6 @@ function PokemonProfile({ name }: { name: string }) {
     const [legacy_cry, getLegacyCry] = useState('');
     const [latest_cry, getLatestCry] = useState('');
 
-    const [playLegacy] = useSound(legacy_cry);
-    const [playLatest] = useSound(latest_cry);
-
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/` + name)
             .then(response => {
@@ -63,14 +61,6 @@ function PokemonProfile({ name }: { name: string }) {
     if (!pokemon) {
         return <div>Loading...</div>;
     }
-
-    const handlePlayLegacy = () => {
-        playLegacy();
-    };
-
-    const handlePlayLatest = () => {
-        playLatest();
-    };
 
     return (
         <div>
@@ -123,9 +113,18 @@ function PokemonProfile({ name }: { name: string }) {
                     </div>
                     <div className="right">
                         <div>
-                            <div className="text-center">
-                                <button id="legacy_sound" className="xs:mb-2 sm:mb-0 py-2 px-3 bg-sky-400 rounded rounded-md font-black mx-4" onClick={handlePlayLegacy}>Sound (Legacy)</button>
-                                <button id="latest_sound" className="py-2 px-3 bg-sky-400 rounded rounded-md font-black mx-4" onClick={handlePlayLatest}>Sound (Latest)</button>
+                            <div className="text-center font-black pb-4 underline">
+                                Sounds:
+                            </div>
+                            <div className="text-center grid grid-cols-2">
+                                <AudioBlock
+                                    name="Legacy"
+                                    src={legacy_cry}
+                                />
+                                <AudioBlock
+                                    name="Latest"
+                                    src={latest_cry}
+                                />
                             </div>
                             <table className="w-full">
                                 <tbody>
