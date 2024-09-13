@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PokemonProfile from './PokemonProfile';
+import RandomPokemonProfile from './RandomPokemonProfile';
 
 function PokemonRandom() {
     const [id, setId] = useState(Math.floor(Math.random() * 1118));
@@ -16,7 +16,7 @@ function PokemonRandom() {
                         Randomise
                     </button>
                 </div>
-                <PokemonProfile name={id} id={id} />
+                <RandomPokemonProfile id={id} />
             </div>
         </div>
     );

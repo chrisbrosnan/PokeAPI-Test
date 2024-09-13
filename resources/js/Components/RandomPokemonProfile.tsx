@@ -3,7 +3,9 @@ import axios from 'axios';
 import _ from 'lodash';
 import useSound from 'use-sound';
 
+// Define the interface for the Pokemon data
 interface Pokemon {
+    name: string;
     sprites: {
         front_default: string;
         front_shiny: string;
@@ -40,49 +42,47 @@ interface Pokemon {
     };
 }
 
-function PokemonProfile({ name }: { name: string }) {
+function PokemonProfile({ id }: { id: number }) {
     const [pokemon, getPokemon] = useState<Pokemon | null>(null);
     const [legacy_cry, getLegacyCry] = useState('');
     const [latest_cry, getLatestCry] = useState('');
-
-    const [playLegacy] = useSound(legacy_cry);
-    const [playLatest] = useSound(latest_cry);
+    const [play_legacy] = useSound(legacy_cry);
+    const [play_latest] = useSound(latest_cry);
 
     useEffect(() => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/` + name)
+        axios.get(`https://pokeapi.co/api/v2/pokemon/` + id)
             .then(response => {
                 getPokemon(response.data);
                 getLegacyCry(response.data.cries.legacy);
                 getLatestCry(response.data.cries.latest);
-                console.log(response.data);
             })
             .catch(error => {
                 console.error(error);
             });
-    }, [name]);
+    }, [id]);
 
     if (!pokemon) {
         return <div>Loading...</div>;
     }
 
     const handlePlayLegacy = () => {
-        playLegacy();
+        play_legacy();
     };
 
     const handlePlayLatest = () => {
-        playLatest();
+        play_latest();
     };
 
     return (
         <div>
             <div className="w-3/4 mx-auto">
                 <div className="text-center">
-                    <h3 className="text-5xl py-4 font-black">{_.capitalize(name)}</h3>
+                    <h3 className="text-5xl py-4 font-black">{_.capitalize(pokemon.name)}</h3>
                 </div>
                 <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                     <div className="left">
                         <div className="text-center">
-                            <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.sprites.front_default} alt={name + ' picture'} />
+                            <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
                         </div>
                         <div>
                             <table className="mx-auto mb-4 w-3/4 rounded rounded-m bg-sky-400">
@@ -174,16 +174,16 @@ function PokemonProfile({ name }: { name: string }) {
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <p>Front Default: <br /><img className="mx-auto" src={pokemon.sprites.front_default} alt={name + ' front'} /></p>
+                                                    <p>Front Default: <br /><img className="mx-auto" src={pokemon.sprites.front_default} alt={pokemon.name + ' front'} /></p>
                                                 </td>
                                                 <td>
-                                                    <p>Front Shiny: <br /><img className="mx-auto" src={pokemon.sprites.front_shiny} alt={name + ' front (shiny)'} /></p>
+                                                    <p>Front Shiny: <br /><img className="mx-auto" src={pokemon.sprites.front_shiny} alt={pokemon.name + ' front (shiny)'} /></p>
                                                 </td>
                                                 <td>
-                                                    <p>Back Default: <br /><img className="mx-auto" src={pokemon.sprites.back_default} alt={name + ' back'} /></p>
+                                                    <p>Back Default: <br /><img className="mx-auto" src={pokemon.sprites.back_default} alt={pokemon.name + ' back'} /></p>
                                                 </td>
                                                 <td>
-                                                    <p>Back Shiny: <br /><img className="mx-auto" src={pokemon.sprites.back_shiny} alt={name + ' back (shiny)'} /></p>
+                                                    <p>Back Shiny: <br /><img className="mx-auto" src={pokemon.sprites.back_shiny} alt={pokemon.name + 'back (shiny)'} /></p>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -198,4 +198,4 @@ function PokemonProfile({ name }: { name: string }) {
     );
 }
 
-export default PokemonProfile;  
+export default PokemonProfile;
