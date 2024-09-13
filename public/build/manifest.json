@@ -1,63 +1,52 @@
 {
-  "_Footer-BFdQdA0I.js": {
-    "file": "assets/Footer-BFdQdA0I.js",
+  "_AudioBlock-CpMJszsX.js": {
+    "file": "assets/AudioBlock-CpMJszsX.js",
+    "name": "AudioBlock",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_Footer-DhC_1XTL.js": {
+    "file": "assets/Footer-DhC_1XTL.js",
     "name": "Footer",
     "imports": [
       "resources/js/app.tsx"
     ]
   },
-  "_howler-DJ5zwTS2.js": {
-    "file": "assets/howler-DJ5zwTS2.js",
-    "name": "howler",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.tsx"
-    ]
-  },
-  "_use-sound.esm-CWWfqcgs.js": {
-    "file": "assets/use-sound.esm-CWWfqcgs.js",
-    "name": "use-sound.esm",
-    "imports": [
-      "resources/js/app.tsx"
-    ],
-    "dynamicImports": [
-      "_howler-DJ5zwTS2.js"
-    ]
-  },
   "resources/js/Pages/Profile.tsx": {
-    "file": "assets/Profile-B10NJN0_.js",
+    "file": "assets/Profile-CmlXWJF9.js",
     "name": "Profile",
     "src": "resources/js/Pages/Profile.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_Footer-BFdQdA0I.js",
-      "_use-sound.esm-CWWfqcgs.js"
+      "_Footer-DhC_1XTL.js",
+      "_AudioBlock-CpMJszsX.js"
     ]
   },
   "resources/js/Pages/Random.tsx": {
-    "file": "assets/Random-C5uuDT4E.js",
+    "file": "assets/Random-BV7Su-dU.js",
     "name": "Random",
     "src": "resources/js/Pages/Random.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_Footer-BFdQdA0I.js",
-      "_use-sound.esm-CWWfqcgs.js"
+      "_Footer-DhC_1XTL.js",
+      "_AudioBlock-CpMJszsX.js"
     ]
   },
   "resources/js/Pages/Welcome.tsx": {
-    "file": "assets/Welcome-BCgvPMiI.js",
+    "file": "assets/Welcome-Ck12X5bB.js",
     "name": "Welcome",
     "src": "resources/js/Pages/Welcome.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_Footer-BFdQdA0I.js"
+      "_Footer-DhC_1XTL.js"
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-Clhuj2sY.js",
+    "file": "assets/app-fb48goET.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -67,7 +56,7 @@
       "resources/js/Pages/Welcome.tsx"
     ],
     "css": [
-      "assets/app-CKFbw7Iv.css"
+      "assets/app-DmTovTXh.css"
     ]
   }
 }

@@ -9,12 +9,12 @@ export default function Profile() {
     return (
         <>
             <Head title="PokeAPI Test - Pokemon Profile" />
-            <div className="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+            <div className="bg-gray-50 text-black/50">
                 <div className="relative min-h-screen flex flex-col selection:bg-[#FF2D20] selection:text-white">
                     <div className="relative w-full">
                         <Navigation/>
 
-                        <main className="py-8 px-6 bg-sky-400">
+                        <main className="py-8 px-6 bg-gradient-to-r from-cyan-500 to-green-500">
                             <div className="p-4 bg-white rounded-md text-black">
                                 <PokemonProfile name={pokemon_name} />
                             </div>
