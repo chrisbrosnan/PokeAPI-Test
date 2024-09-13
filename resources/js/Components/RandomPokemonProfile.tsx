@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import _ from 'lodash';
 import AudioBlock from './AudioBlock';
+import Random from '@/Pages/Random';
 
 // Define the interface for the Pokemon data
 interface Pokemon {
@@ -42,7 +43,7 @@ interface Pokemon {
     };
 }
 
-function PokemonProfile({ id }: { id: number }) {
+function RandomPokemonProfile({ id }: { id: number }) {
     const [pokemon, getPokemon] = useState<Pokemon | null>(null);
     const [latest_cry, getLatestCry] = useState('');
 
@@ -187,4 +188,4 @@ function PokemonProfile({ id }: { id: number }) {
     );
 }
 
-export default PokemonProfile;
+export default RandomPokemonProfile;
