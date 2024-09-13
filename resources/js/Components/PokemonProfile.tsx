@@ -26,12 +26,12 @@ function PokemonProfile({  ...props }) {
         <div>
             <div className="w-3/4 mx-auto">
                 <div className="text-center">
-                    <h3 className="text-5xl py-4 font-black">{_.capitalize(pokemon.name)}</h3>
+                    <h3 className="text-5xl py-4 font-black">{_.capitalize(props.name)}</h3>
                 </div>
                 <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                     <div className="left">
                         <div className="text-center">
-                            <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.sprites?.front_default} alt={pokemon.name + ' picture'} />
+                            <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.sprites?.front_default} alt={props.name + ' picture'} />
                         </div>
                         <div>
                             <table className="mx-auto mb-4 w-3/4 rounded rounded-m bg-sky-400">
@@ -123,16 +123,16 @@ function PokemonProfile({  ...props }) {
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <p>Front Default: <br/><img className="mx-auto" src={pokemon.sprites?.front_default} alt={pokemon.name + ' front'} /></p>
+                                                    <p>Front Default: <br/><img className="mx-auto" src={pokemon.sprites?.front_default} alt={props.name + ' front'} /></p>
                                                 </td>
                                                 <td>
-                                                    <p>Front Shiny: <br/><img className="mx-auto" src={pokemon.sprites?.front_shiny} alt={pokemon.name + ' front (shiny)'} /></p>
+                                                    <p>Front Shiny: <br/><img className="mx-auto" src={pokemon.sprites?.front_shiny} alt={props.name + ' front (shiny)'} /></p>
                                                 </td>
                                                 <td>
-                                                    <p>Back Default: <br/><img className="mx-auto" src={pokemon.sprites?.back_default} alt={pokemon.name + ' back'} /></p>
+                                                    <p>Back Default: <br/><img className="mx-auto" src={pokemon.sprites?.back_default} alt={props.name + ' back'} /></p>
                                                 </td>
                                                 <td>
-                                                    <p>Back Shiny: <br/><img className="mx-auto" src={pokemon.sprites?.back_shiny} alt={pokemon.name + 'back (shiny)'} /></p>
+                                                    <p>Back Shiny: <br/><img className="mx-auto" src={pokemon.sprites?.back_shiny} alt={props.name + 'back (shiny)'} /></p>
                                                 </td>
                                             </tr>
                                         </tbody>
