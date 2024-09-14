@@ -46,7 +46,7 @@ function PokemonProfile({ name }: { name: string }) {
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
-        axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/` + name)
+        axios.get(`https://pokeapi.co/api/v2/pokemon/` + name)
             .then(response => {
                 getPokemon(response.data);
                 getLatestCry(response.data.cries.latest);
