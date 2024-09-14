@@ -24,13 +24,15 @@ class Pokemon extends Model
         'special_defense',
         'speed',
         'moves', 
-        'sprites'
+        'sprites', 
+        'sound'
     ];
 
     protected $casts = [
         'types'     => 'array',
         'abilities' => 'array',
         'moves'     => 'array',
-        'sprites'   => 'array'
+        'sprites'   => 'array',
+        'sound'     => 'string'
     ];
 }

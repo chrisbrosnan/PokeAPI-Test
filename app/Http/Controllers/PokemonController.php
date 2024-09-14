@@ -19,22 +19,22 @@ class PokemonController extends Controller
 
             $pokemon = new Pokemon();
             $pokemon->id              = $data['id'];
-            $pokemon->name            = $data['name'];
-            $pokemon->types           = $data['types'];
-            $pokemon->abilities       = $data['abilities'];
-            $pokemon->image           = $data['sprites']['front_default'];
-            $pokemon->height          = $data['height'];
-            $pokemon->weight          = $data['weight'];
-            $pokemon->base_experience = $data['base_experience'];
-            $pokemon->hp              = $data['stats'][0]['base_stat'];
-            $pokemon->attack          = $data['stats'][1]['base_stat'];
-            $pokemon->defense         = $data['stats'][2]['base_stat'];
-            $pokemon->special_attack  = $data['stats'][3]['base_stat'];
-            $pokemon->special_defense = $data['stats'][4]['base_stat'];
-            $pokemon->speed           = $data['stats'][5]['base_stat'];
-            $pokemon->moves           = $data['moves'];
-            $pokemon->sprites         = $data['sprites'];
-            $pokemon->soundex         = $data['cries']['latest'];
+            $pokemon->name            = $data['name'] ?? '';
+            $pokemon->types           = $data['types'] ?? '';
+            $pokemon->abilities       = $data['abilities'] ?? '';
+            $pokemon->image           = $data['sprites']['front_default'] ?? '';
+            $pokemon->height          = $data['height'] ?? '';
+            $pokemon->weight          = $data['weight'] ?? '';
+            $pokemon->base_experience = $data['base_experience'] ?? '';
+            $pokemon->hp              = $data['stats'][0]['base_stat'] ?? '';
+            $pokemon->attack          = $data['stats'][1]['base_stat'] ?? '';
+            $pokemon->defense         = $data['stats'][2]['base_stat'] ?? '';
+            $pokemon->special_attack  = $data['stats'][3]['base_stat'] ?? '';
+            $pokemon->special_defense = $data['stats'][4]['base_stat'] ?? '';
+            $pokemon->speed           = $data['stats'][5]['base_stat'] ?? '';
+            $pokemon->moves           = $data['moves'] ?? '';
+            $pokemon->sprites         = $data['sprites'] ?? '';
+            $pokemon->sound           = $data['cries']['latest'] ?? '';
 
             $pokemon->save();
         }
