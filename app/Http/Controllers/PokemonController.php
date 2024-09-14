@@ -48,7 +48,13 @@ class PokemonController extends Controller
 
     public function show($id)
     {
-        $pokemon = Pokemon::find($id);
+        $pokemon = Pokemon::where('id', $id);
+        return response()->json($pokemon);
+    }
+
+    public function random()
+    {
+        $pokemon = Pokemon::inRandomOrder()->first();
         return response()->json($pokemon);
     }
 }
