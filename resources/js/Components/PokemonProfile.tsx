@@ -7,7 +7,7 @@ interface Pokemon {
     name: string; 
     hp: number;
     attack: number;
-    defence: number;
+    defense: number;
     special_attack: number;
     special_defense: number;
     speed: number;
@@ -91,16 +91,15 @@ function PokemonProfile({ name }: { name: string }) {
                                             <p>Attack:</p>
                                             <p>Defense:</p>
                                             <p>Special Attack:</p>
-                                            <p>Special Defense:</p>
+                                            <p>Special Defence:</p>
                                             <p>Speed:</p>
                                         </td>
                                         <td className="px-6 align-top pb-4 xs:text-xs">
                                             <p>{pokemon.hp}</p>
                                             <p>{pokemon.attack}</p>
-                                            <p>{pokemon.defence}</p>
+                                            <p>{pokemon.defense}</p>
                                             <p>{pokemon.special_attack}</p>
                                             <p>{pokemon.special_defense}</p>
-                                            <p>{pokemon.speed}</p>
                                             <p>{pokemon.speed}</p>
                                         </td>
                                     </tr>
