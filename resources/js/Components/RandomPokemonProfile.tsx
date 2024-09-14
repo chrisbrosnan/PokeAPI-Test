@@ -6,7 +6,12 @@ import AudioBlock from './AudioBlock';
 // Define the interface for the Pokemon data
 interface Pokemon {
     name: string;
-    image: string;
+    sprites: {
+        front_default: string;
+        front_shiny: string;
+        back_default: string;
+        back_shiny: string;
+    };
     stats: {
         base_stat: number;
         stat: {
@@ -45,7 +50,6 @@ function RandomPokemonProfile({ id }: { id: number }) {
         axios.get(`/api/pokemon/` + id)
             .then(response => {
                 getPokemon(response.data);
-                console.log(response.data);
                 getLatestCry(response.data.sound);
             })
             .catch(error => {
@@ -67,7 +71,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
                     <div className="left">
                         <div className="text-center">
                             <picture>
-                                <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.image} alt={pokemon.name + ' picture'} />
+                                <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
                             </picture>
                         </div>
                         <div>
@@ -75,6 +79,18 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                 <tbody>
                                     <tr>
                                         <td colSpan={2} className="px-6 pt-4 align-top font-black text-center underline">Stats:</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 align-top font-black pb-4 xs:text-xs">
+                                            {pokemon.stats.map((item, index) => (
+                                                <p key={index}><em>{_.capitalize(item.stat.name)}</em></p>
+                                            ))}
+                                        </td>
+                                        <td className="px-6 align-top pb-4 xs:text-xs">
+                                            {pokemon.stats.map((item, index) => (
+                                                <p key={index}>{item.base_stat}</p>
+                                            ))}
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -108,6 +124,30 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                     <tr className="py-3">
                                         <td colSpan={2} className="py-4 px-3 align-top text-center font-black underline">Details:</td>
                                     </tr>
+                                    <tr className="py-3">
+                                        <td className="py-3 px-3 align-top font-black">Abilities:</td>
+                                        <td className="py-3 px-3 align-top">
+                                            {pokemon.abilities.map((item, index) => (
+                                                <p key={index}>{_.capitalize(item.ability.name)}</p>
+                                            ))}
+                                        </td>
+                                    </tr>
+                                    <tr className="py-3">
+                                        <td className="py-3 px-3 align-top font-black">Types:</td>
+                                        <td className="py-3 px-3 align-top">
+                                            {pokemon.types.map((item, index) => (
+                                                <p key={index}>{_.capitalize(item.type.name)}</p>
+                                            ))}
+                                        </td>
+                                    </tr>
+                                    <tr className="py-3">
+                                        <td className="py-3 px-3 align-top font-black">Moves:</td>
+                                        <td className="py-3 px-3 align-top">
+                                            {pokemon.moves.map((item, index) => (
+                                                <span key={index}>{_.capitalize(item.move.name)}, </span>
+                                            ))}
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -122,6 +162,38 @@ function RandomPokemonProfile({ id }: { id: number }) {
                             <tr>
                                 <td colSpan={2}>
                                     <table className="w-full text-center">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p>Front Default: <br />
+                                                    <picture>
+                                                        <source srcSet={pokemon.sprites.front_default} type="image/webp" />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                    </picture></p>
+                                                </td>
+                                                <td>
+                                                    <p>Front Shiny: <br />
+                                                    <picture>
+                                                        <source srcSet={pokemon.sprites.back_default} type="image/webp" />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                    </picture></p>
+                                                </td>
+                                                <td>
+                                                    <p>Back Default: <br />
+                                                    <picture>
+                                                        <source srcSet={pokemon.sprites.front_shiny} type="image/webp" />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                    </picture></p>
+                                                </td>
+                                                <td>
+                                                    <p>Back Shiny: <br />
+                                                    <picture>
+                                                        <source srcSet={pokemon.sprites.back_shiny} type="image/webp" />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                    </picture></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </td>
                             </tr>
