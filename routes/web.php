@@ -51,7 +51,7 @@ Route::get('/profile/{name}', function () {
     ]);
 })->name('profile');
 
-Route::prefix('api')->group(function () {
+Route::prefix('api')->middleware(['cors'])->group(function () {
     Route::get('/import', [PokemonController::class, 'import'])
         ->name('import'); 
     Route::get('/pokemon', [PokemonController::class, 'index'])
