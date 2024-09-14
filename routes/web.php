@@ -59,7 +59,7 @@ Route::prefix('api')->group(function () {
         ->name('pokemon');
     Route::get('/pokemon/{id}', [PokemonController::class, 'show'])
         ->name('pokemon.show');
-    Route::get('/pokemon/{name}', [PokemonController::class, 'get_by_name'])
+    Route::get('/pokemon/name/{name}', [PokemonController::class, 'get_by_name'])
         ->name('pokemon.get_by_name');
     Route::get('/pokemon/random', [PokemonController::class, 'random'])
         ->name('pokemon.random');
