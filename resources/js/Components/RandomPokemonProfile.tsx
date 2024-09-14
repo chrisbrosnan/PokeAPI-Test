@@ -127,37 +127,6 @@ function RandomPokemonProfile() {
                                     src={latest_cry}
                                 />
                             </div>
-                            <table className="w-full">
-                                <tbody>
-                                    <tr className="py-3">
-                                        <td colSpan={2} className="py-4 px-3 align-top text-center font-black underline">Details:</td>
-                                    </tr>
-                                    <tr className="py-3">
-                                        <td className="py-3 px-3 align-top font-black">Abilities:</td>
-                                        <td className="py-3 px-3 align-top">
-                                            {pokemon.abilities.map((item, index) => (
-                                                <p key={index}>{_.capitalize(item.ability.name)}</p>
-                                            ))}
-                                        </td>
-                                    </tr>
-                                    <tr className="py-3">
-                                        <td className="py-3 px-3 align-top font-black">Types:</td>
-                                        <td className="py-3 px-3 align-top">
-                                            {pokemon.types.map((item, index) => (
-                                                <p key={index}>{_.capitalize(item.type.name)}</p>
-                                            ))}
-                                        </td>
-                                    </tr>
-                                    <tr className="py-3">
-                                        <td className="py-3 px-3 align-top font-black">Moves:</td>
-                                        <td className="py-3 px-3 align-top">
-                                            {pokemon.moves.map((item, index) => (
-                                                <span key={index}>{_.capitalize(item.move.name)}, </span>
-                                            ))}
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
