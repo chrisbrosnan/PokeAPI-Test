@@ -47,10 +47,10 @@ function RandomPokemonProfile({ id }: { id: number }) {
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
-        axios.get(`/api/pokemon/` + id)
+        axios.get(`https://pokeapi.co/api/v2/pokemon/` + id)
             .then(response => {
                 getPokemon(response.data);
-                getLatestCry(response.data.sound);
+                getLatestCry(response.data.cries.latest);
             })
             .catch(error => {
                 console.error(error);
