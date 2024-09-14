@@ -12,12 +12,12 @@ interface Pokemon {
         back_default: string;
         back_shiny: string;
     };
-    stats: {
-        base_stat: number;
-        stat: {
-            name: string;
-        };
-    }[];
+    hp: number;
+    attack: number;
+    defence: number;
+    special_attack: number;
+    special_defence: number;
+    speed: number;
     height: number;
     weight: number;
     base_experience: number;
@@ -75,6 +75,31 @@ function RandomPokemonProfile({ id }: { id: number }) {
                             </picture>
                         </div>
                         <div>
+                            <table className="mx-auto mb-4 xs:w-full sm:w-2/3 rounded rounded-lg bg-sky-400 px-3">
+                                <tbody>
+                                    <tr>
+                                        <td colSpan={2} className="px-6 pt-4 align-top font-black text-center underline">Stats:</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 align-top font-black pb-4 xs:text-xs">
+                                            <p>HP:</p>
+                                            <p>Attack:</p>
+                                            <p>Defense:</p>
+                                            <p>Special Attack:</p>
+                                            <p>Special Defense:</p>
+                                            <p>Speed:</p>
+                                        </td>
+                                        <td className="px-6 align-top pb-4 xs:text-xs">
+                                            <p>{pokemon.hp}</p>
+                                            <p>{pokemon.attack}</p>
+                                            <p>{pokemon.defence}</p>
+                                            <p>{pokemon.special_attack}</p>
+                                            <p>{pokemon.special_defence}</p>
+                                            <p>{pokemon.speed}</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                             <table className="mx-auto mb-4 xs:w-full sm:w-3/4 xs:text-xs">
                                 <tbody>
                                     <tr>
@@ -100,6 +125,37 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                     src={latest_cry}
                                 />
                             </div>
+                            <table className="w-full">
+                                <tbody>
+                                    <tr className="py-3">
+                                        <td colSpan={2} className="py-4 px-3 align-top text-center font-black underline">Details:</td>
+                                    </tr>
+                                    <tr className="py-3">
+                                        <td className="py-3 px-3 align-top font-black">Abilities:</td>
+                                        <td className="py-3 px-3 align-top">
+                                            {pokemon.abilities.map((item, index) => (
+                                                <p key={index}>{_.capitalize(item.ability.name)}</p>
+                                            ))}
+                                        </td>
+                                    </tr>
+                                    <tr className="py-3">
+                                        <td className="py-3 px-3 align-top font-black">Types:</td>
+                                        <td className="py-3 px-3 align-top">
+                                            {pokemon.types.map((item, index) => (
+                                                <p key={index}>{_.capitalize(item.type.name)}</p>
+                                            ))}
+                                        </td>
+                                    </tr>
+                                    <tr className="py-3">
+                                        <td className="py-3 px-3 align-top font-black">Moves:</td>
+                                        <td className="py-3 px-3 align-top">
+                                            {pokemon.moves.map((item, index) => (
+                                                <span key={index}>{_.capitalize(item.move.name)}, </span>
+                                            ))}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
