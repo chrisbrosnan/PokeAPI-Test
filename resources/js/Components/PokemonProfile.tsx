@@ -70,13 +70,13 @@ function PokemonProfile({ name }: { name: string }) {
         <div>
             <div className="xs:w-full sm:w-3/4 mx-auto">
                 <div className="text-center">
-                    <h3 className="text-5xl py-4 font-black">{_.capitalize(pokemon.name)}</h3>
+                    <h3 className="text-5xl py-4 font-black">{_.capitalize(name)}</h3>
                 </div>
                 <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4 xs:w-full sm:w-3/4 mx-auto">
                     <div className="left">
                         <div className="text-center">
                             <picture>
-                                <img className="mx-auto mb-4 w-full border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
+                                <img className="mx-auto mb-4 w-full border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={name + ' picture'} />
                             </picture>
                         </div>
                         <div>
