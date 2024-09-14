@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PokemonController;
+use App\Http\Middleware\Cors; 
 use Inertia\Inertia;
 
 Route::get('/', function () {
@@ -51,7 +52,7 @@ Route::get('/profile/{name}', function () {
     ]);
 })->name('profile');
 
-Route::prefix('api')->middleware(['cors'])->group(function () {
+Route::prefix('api')->group(['middleware' => 'cors'], function () {
     Route::get('/import', [PokemonController::class, 'import'])
         ->name('import'); 
     Route::get('/pokemon', [PokemonController::class, 'index'])
