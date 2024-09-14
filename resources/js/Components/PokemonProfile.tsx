@@ -92,7 +92,6 @@ function PokemonProfile({ name }: { name: string }) {
                                             <p>Defense:</p>
                                             <p>Special Attack:</p>
                                             <p>Special Defense:</p>
-                                            <p>Speed:</p>
                                         </td>
                                         <td className="px-6 align-top pb-4 xs:text-xs">
                                             <p>{pokemon.hp}</p>
@@ -100,7 +99,6 @@ function PokemonProfile({ name }: { name: string }) {
                                             <p>{pokemon.defence}</p>
                                             <p>{pokemon.special_attack}</p>
                                             <p>{pokemon.special_defense}</p>
-                                            <p>{pokemon.speed}</p>
                                         </td>
                                     </tr>
                                 </tbody>
