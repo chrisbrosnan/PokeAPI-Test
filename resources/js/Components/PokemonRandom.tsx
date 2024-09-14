@@ -16,7 +16,7 @@ function PokemonRandom() {
                         Randomise
                     </button>
                 </div>
-                <RandomPokemonProfile />
+                <RandomPokemonProfile id={id} />
             </div>
         </div>
     );
