@@ -88,11 +88,16 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                             <p>Defense:</p>
                                             <p>Special Attack:</p>
                                             <p>Special Defense:</p>
+                                            <p>Speed:</p>
                                         </td>
                                         <td className="px-6 align-top pb-4 xs:text-xs">
                                             <p>{pokemon.hp}</p>
                                             <p>{pokemon.attack}</p>
                                             <p>{pokemon.defence}</p>
+                                            <p>{pokemon.special_attack}</p>
+                                            <p>{pokemon.special_defense}</p>
+                                            <p>{pokemon.speed}</p>
+                                            <p>{pokemon.speed}</p>
                                         </td>
                                     </tr>
                                 </tbody>
