@@ -64,7 +64,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
 
     return (
         <div>
-            <div className="w-3/4 mx-auto">
+            <div className="xs:w-full sm:w-3/4 mx-auto">
                 <div className="text-center">
                     <h3 className="text-5xl py-4 font-black">{_.capitalize(pokemon.name)}</h3>
                 </div>
@@ -72,7 +72,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
                     <div className="left">
                         <div className="text-center">
                             <picture>
-                                <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
+                                <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
                             </picture>
                         </div>
                         <div>
@@ -95,7 +95,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                     </tr>
                                 </tbody>
                             </table>
-                            <table className="mx-auto mb-4 w-3/4 xs:text-xs">
+                            <table className="mx-auto mb-4 xs:w-full sm:w-3/4 xs:text-xs">
                                 <tbody>
                                     <tr>
                                         <td className="py-1 px-3 font-black underline">Height:</td>

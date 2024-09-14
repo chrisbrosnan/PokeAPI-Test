@@ -62,14 +62,14 @@ function PokemonProfile({ name }: { name: string }) {
 
     return (
         <div>
-            <div className="w-3/4 mx-auto">
+            <div className="xs:w-full sm:w-3/4 mx-auto">
                 <div className="text-center">
                     <h3 className="text-5xl py-4 font-black">{_.capitalize(name)}</h3>
                 </div>
-                <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4 w-3/4 mx-auto">
+                <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4 xs:w-full sm:w-3/4 mx-auto">
                     <div className="left">
                         <div className="text-center">
-                            <img className="mx-auto mb-4 w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={name + ' picture'} />
+                            <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={name + ' picture'} />
                         </div>
                         <div>
                             <table className="mx-auto mb-4 w-2/3 rounded rounded-lg bg-sky-400 px-3">
@@ -91,7 +91,7 @@ function PokemonProfile({ name }: { name: string }) {
                                     </tr>
                                 </tbody>
                             </table>
-                            <table className="mx-auto mb-4 w-3/4 xs:text-xs">
+                            <table className="mx-auto mb-4 xs:w-full sm:w-3/4  xs:text-xs">
                                 <tbody>
                                     <tr>
                                         <td className="py-1 px-3 font-black underline">Height:</td>
@@ -150,7 +150,7 @@ function PokemonProfile({ name }: { name: string }) {
                         </div>
                     </div>
                 </div>
-                <div className="w-3/4 mx-auto">
+                <div className="xs:w-full sm:w-3/4 mx-auto">
                     <table className="w-full">
                         <tbody>
                             <tr className="py-3 mt-4 underline">
