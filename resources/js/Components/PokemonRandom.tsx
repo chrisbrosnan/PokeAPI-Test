@@ -10,7 +10,7 @@ function PokemonRandom() {
 
     return (
         <div>
-            <div className="w-3/4 mx-auto">
+            <div className="xs:w-full sm:w-3/4 mx-auto">
                 <div className="text-center">
                     <button className="mx-auto bg-blue-500 hover:bg-yellow-400 text-white font-bold p-2 rounded" onClick={refreshPage}>
                         Randomise
