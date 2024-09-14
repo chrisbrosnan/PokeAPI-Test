@@ -50,7 +50,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
         axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/` + id)
             .then(response => {
                 getPokemon(response.data);
-                getLatestCry(response.data.cries.latest);
+                getLatestCry(response.data.sound);
             })
             .catch(error => {
                 console.error(error);
