@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import _ from 'lodash';
 import AudioBlock from './AudioBlock';
-import Random from '@/Pages/Random';
 
 // Define the interface for the Pokemon data
 interface Pokemon {
@@ -68,7 +67,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
                 <div className="text-center">
                     <h3 className="text-5xl py-4 font-black">{_.capitalize(pokemon.name)}</h3>
                 </div>
-                <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4 xs:w-full sm:w-3/4 mx-auto">
                     <div className="left">
                         <div className="text-center">
                             <picture>
@@ -154,7 +153,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="xs:w-full sm:w-3/4 mx-auto">
                     <table className="w-full">
                         <tbody>
                             <tr className="py-3 mt-4 underline">

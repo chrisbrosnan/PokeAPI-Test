@@ -69,7 +69,9 @@ function PokemonProfile({ name }: { name: string }) {
                 <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4 xs:w-full sm:w-3/4 mx-auto">
                     <div className="left">
                         <div className="text-center">
-                            <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={name + ' picture'} />
+                            <picture>
+                                <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={name + ' picture'} />
+                            </picture>
                         </div>
                         <div>
                             <table className="mx-auto mb-4 w-2/3 rounded rounded-lg bg-sky-400 px-3">
