@@ -61,7 +61,7 @@ class PokemonController extends Controller
 
     public function random()
     {
-        $pokemon = Pokemon::inRandomOrder()->first();
+        $pokemon = Pokemon::all()->inRandomOrder()->first();
         return response()->json($pokemon);
     }
 }
