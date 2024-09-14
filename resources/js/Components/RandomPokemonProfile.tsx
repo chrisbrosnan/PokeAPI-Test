@@ -43,21 +43,20 @@ interface Pokemon {
     };
 }
 
-function RandomPokemonProfile() {
+function RandomPokemonProfile({ id }: { id: number }) {
     const [pokemon, getPokemon] = useState<Pokemon | null>(null);
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
-        axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/random`)
+        axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/random/` + id)
             .then(response => {
                 getPokemon(response.data);
                 getLatestCry(response.data.sound);
-                console.log(response.data.abilities);
             })
             .catch(error => {
                 console.error(error);
             });
-    }, []);
+    }, [id]);
 
     if (!pokemon) {
         return <div>Loading...</div>;
@@ -127,6 +126,37 @@ function RandomPokemonProfile() {
                                     src={latest_cry}
                                 />
                             </div>
+                            <table className="w-full">
+                                <tbody>
+                                    <tr className="py-3">
+                                        <td colSpan={2} className="py-4 px-3 align-top text-center font-black underline">Details:</td>
+                                    </tr>
+                                    <tr className="py-3">
+                                        <td className="py-3 px-3 align-top font-black">Abilities:</td>
+                                        <td className="py-3 px-3 align-top">
+                                            {pokemon.abilities.map((item, index) => (
+                                                <p key={index}>{_.capitalize(item.ability.name)}</p>
+                                            ))}
+                                        </td>
+                                    </tr>
+                                    <tr className="py-3">
+                                        <td className="py-3 px-3 align-top font-black">Types:</td>
+                                        <td className="py-3 px-3 align-top">
+                                            {pokemon.types.map((item, index) => (
+                                                <p key={index}>{_.capitalize(item.type.name)}</p>
+                                            ))}
+                                        </td>
+                                    </tr>
+                                    <tr className="py-3">
+                                        <td className="py-3 px-3 align-top font-black">Moves:</td>
+                                        <td className="py-3 px-3 align-top">
+                                            {pokemon.moves.map((item, index) => (
+                                                <span key={index}>{_.capitalize(item.move.name)}, </span>
+                                            ))}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
