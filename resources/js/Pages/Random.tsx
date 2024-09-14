@@ -12,11 +12,11 @@ export default function Random() {
                     <div className="relative w-full">
                         <Navigation/>
 
-                        <main className="py-8 px-6 bg-gradient-to-r from-cyan-500 to-green-500">
-                            <div className="p-4 bg-white rounded-md text-black">
-                                <PokemonRandom />
-                            </div>
-                        </main>
+                            <main className="py-8 px-6 bg-gradient-to-r from-cyan-500 to-green-500">
+                                <div className="p-4 bg-white rounded-md text-black">
+                                    <PokemonRandom />
+                                </div>
+                            </main>
 
                         <Footer/>
                     </div>
