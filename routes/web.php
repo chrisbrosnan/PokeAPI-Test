@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PokemonController;
 use Inertia\Inertia;
 
 Route::get('/', function () {
@@ -50,4 +51,11 @@ Route::get('/profile/{name}', function () {
     ]);
 })->name('profile');
 
-require __DIR__.'/auth.php';
+Route::prefix('api')->group(function () {
+    Route::get('/import', [PokemonController::class, 'import'])
+        ->name('import'); 
+    Route::get('/pokemon', [PokemonController::class, 'index'])
+        ->name('pokemon');
+    Route::get('/pokemon/{id}', [PokemonController::class, 'show'])
+        ->name('pokemon.show');
+});

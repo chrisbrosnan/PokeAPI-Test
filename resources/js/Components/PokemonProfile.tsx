@@ -46,7 +46,7 @@ function PokemonProfile({ name }: { name: string }) {
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/` + name)
+        axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/` + name)
             .then(response => {
                 getPokemon(response.data);
                 getLatestCry(response.data.cries.latest);
@@ -74,7 +74,7 @@ function PokemonProfile({ name }: { name: string }) {
                             </picture>
                         </div>
                         <div>
-                            <table className="mx-auto mb-4 w-2/3 rounded rounded-lg bg-sky-400 px-3">
+                            <table className="mx-auto mb-4 xs:full sm:w-2/3 rounded rounded-lg bg-sky-400 px-3">
                                 <tbody>
                                     <tr>
                                         <td colSpan={2} className="px-6 pt-4 align-top font-black text-center underline">Stats:</td>

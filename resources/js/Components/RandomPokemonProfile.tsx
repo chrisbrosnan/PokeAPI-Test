@@ -47,7 +47,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/` + id)
+        axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/` + id)
             .then(response => {
                 getPokemon(response.data);
                 getLatestCry(response.data.cries.latest);
@@ -71,11 +71,11 @@ function RandomPokemonProfile({ id }: { id: number }) {
                     <div className="left">
                         <div className="text-center">
                             <picture>
-                                <img className="mx-auto mb-4 xs:w-{200} sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
+                                <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
                             </picture>
                         </div>
                         <div>
-                            <table className="mx-auto mb-4 w-2/3 rounded rounded-lg bg-sky-400 px-3">
+                            <table className="mx-auto mb-4 xs:w-full sm:w-2/3 rounded rounded-lg bg-sky-400 px-3">
                                 <tbody>
                                     <tr>
                                         <td colSpan={2} className="px-6 pt-4 align-top font-black text-center underline">Stats:</td>
