@@ -46,8 +46,14 @@ class PokemonController extends Controller
         $pokemons = Pokemon::all();
         return response()->json($pokemons);
     }
+
+    public function show($id)
+    {
+        $pokemon = Pokemon::find($id);
+        return response()->json($pokemon);
+    }
     
-    public function show($name)
+    public function get_by_name($name)
     {
         $pokemon = Pokemon::where('name', $name)->first();
         return response()->json($pokemon);
