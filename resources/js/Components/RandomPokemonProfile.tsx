@@ -75,18 +75,6 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                     <tr>
                                         <td colSpan={2} className="px-6 pt-4 align-top font-black text-center underline">Stats:</td>
                                     </tr>
-                                    <tr>
-                                        <td className="px-6 align-top font-black pb-4 xs:text-xs">
-                                            {pokemon.stats.map((item, index) => (
-                                                <p key={index}><em>{_.capitalize(item.stat.name)}</em></p>
-                                            ))}
-                                        </td>
-                                        <td className="px-6 align-top pb-4 xs:text-xs">
-                                            {pokemon.stats.map((item, index) => (
-                                                <p key={index}>{item.base_stat}</p>
-                                            ))}
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                             <table className="mx-auto mb-4 xs:w-full sm:w-3/4 xs:text-xs">
@@ -118,30 +106,6 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                 <tbody>
                                     <tr className="py-3">
                                         <td colSpan={2} className="py-4 px-3 align-top text-center font-black underline">Details:</td>
-                                    </tr>
-                                    <tr className="py-3">
-                                        <td className="py-3 px-3 align-top font-black">Abilities:</td>
-                                        <td className="py-3 px-3 align-top">
-                                            {pokemon.abilities.map((item, index) => (
-                                                <p key={index}>{_.capitalize(item.ability.name)}</p>
-                                            ))}
-                                        </td>
-                                    </tr>
-                                    <tr className="py-3">
-                                        <td className="py-3 px-3 align-top font-black">Types:</td>
-                                        <td className="py-3 px-3 align-top">
-                                            {pokemon.types.map((item, index) => (
-                                                <p key={index}>{_.capitalize(item.type.name)}</p>
-                                            ))}
-                                        </td>
-                                    </tr>
-                                    <tr className="py-3">
-                                        <td className="py-3 px-3 align-top font-black">Moves:</td>
-                                        <td className="py-3 px-3 align-top">
-                                            {pokemon.moves.map((item, index) => (
-                                                <span key={index}>{_.capitalize(item.move.name)}, </span>
-                                            ))}
-                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
