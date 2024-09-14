@@ -16,7 +16,7 @@ interface Pokemon {
     attack: number;
     defence: number;
     special_attack: number;
-    special_defence: number;
+    special_defense: number;
     speed: number;
     height: number;
     weight: number;
@@ -95,7 +95,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                             <p>{pokemon.attack}</p>
                                             <p>{pokemon.defence}</p>
                                             <p>{pokemon.special_attack}</p>
-                                            <p>{pokemon.special_defence}</p>
+                                            <p>{pokemon.special_defense}</p>
                                             <p>{pokemon.speed}</p>
                                         </td>
                                     </tr>
