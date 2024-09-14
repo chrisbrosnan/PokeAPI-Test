@@ -71,7 +71,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
                     <div className="left">
                         <div className="text-center">
                             <picture>
-                                <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
+                                <img className="mx-auto mb-4 xs:w-{200} sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
                             </picture>
                         </div>
                         <div>
