@@ -29,6 +29,7 @@ return new class extends Migration
             $table->integer('speed');
             $table->json('moves');
             $table->json('sprites');
+            $table->string('sound');
         });
     }
 
