@@ -6,12 +6,7 @@ import AudioBlock from './AudioBlock';
 // Define the interface for the Pokemon data
 interface Pokemon {
     name: string;
-    sprites: {
-        front_default: string;
-        front_shiny: string;
-        back_default: string;
-        back_shiny: string;
-    };
+    image: string;
     stats: {
         base_stat: number;
         stat: {
@@ -71,7 +66,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
                     <div className="left">
                         <div className="text-center">
                             <picture>
-                                <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={pokemon.name + ' picture'} />
+                                <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.image} alt={pokemon.name + ' picture'} />
                             </picture>
                         </div>
                         <div>
