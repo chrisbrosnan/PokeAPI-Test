@@ -175,28 +175,28 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                                     <p>Front Default: <br />
                                                     <picture>
                                                         <source srcSet={pokemon.sprites.front_default} type="image/webp" />
-                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                        <img className="mx-auto" src="https://placehold.co/100x100" alt={pokemon.name + ' front'} />
                                                     </picture></p>
                                                 </td>
                                                 <td>
                                                     <p>Front Shiny: <br />
                                                     <picture>
                                                         <source srcSet={pokemon.sprites.back_default} type="image/webp" />
-                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                        <img className="mx-auto" src="https://placehold.co/100x100" alt={pokemon.name + ' front'} />
                                                     </picture></p>
                                                 </td>
                                                 <td>
                                                     <p>Back Default: <br />
                                                     <picture>
                                                         <source srcSet={pokemon.sprites.front_shiny} type="image/webp" />
-                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                        <img className="mx-auto" src="https://placehold.co/100x100" alt={pokemon.name + ' front'} />
                                                     </picture></p>
                                                 </td>
                                                 <td>
                                                     <p>Back Shiny: <br />
                                                     <picture>
                                                         <source srcSet={pokemon.sprites.back_shiny} type="image/webp" />
-                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
+                                                        <img className="mx-auto" src="https://placehold.co/100x100" alt={pokemon.name + ' front'} />
                                                     </picture></p>
                                                 </td>
                                             </tr>
