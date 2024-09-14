@@ -5,6 +5,12 @@ import AudioBlock from './AudioBlock';
 
 interface Pokemon {
     name: string; 
+    hp: number;
+    attack: number;
+    defence: number;
+    special_attack: number;
+    special_defense: number;
+    speed: number;
     sprites: {
         front_default: string;
         front_shiny: string;
@@ -49,7 +55,7 @@ function PokemonProfile({ name }: { name: string }) {
         axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/name/` + name)
             .then(response => {
                 getPokemon(response.data);
-                getLatestCry(response.data.cries.latest);
+                getLatestCry(response.data.sound);
             })
             .catch(error => {
                 console.error(error);
@@ -81,14 +87,20 @@ function PokemonProfile({ name }: { name: string }) {
                                     </tr>
                                     <tr>
                                         <td className="px-6 align-top font-black pb-4 xs:text-xs">
-                                            {pokemon.stats.map((item, index) => (
-                                                <p key={index}><em>{_.capitalize(item.stat.name)}</em></p>
-                                            ))}
+                                            <p>HP:</p>
+                                            <p>Attack:</p>
+                                            <p>Defense:</p>
+                                            <p>Special Attack:</p>
+                                            <p>Special Defense:</p>
+                                            <p>Speed:</p>
                                         </td>
                                         <td className="px-6 align-top pb-4 xs:text-xs">
-                                            {pokemon.stats.map((item, index) => (
-                                                <p key={index}>{item.base_stat}</p>
-                                            ))}
+                                            <p>{pokemon.hp}</p>
+                                            <p>{pokemon.attack}</p>
+                                            <p>{pokemon.defence}</p>
+                                            <p>{pokemon.special_attack}</p>
+                                            <p>{pokemon.special_defense}</p>
+                                            <p>{pokemon.speed}</p>
                                         </td>
                                     </tr>
                                 </tbody>
