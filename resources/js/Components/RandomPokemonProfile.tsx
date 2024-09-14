@@ -93,8 +93,6 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                             <p>{pokemon.hp}</p>
                                             <p>{pokemon.attack}</p>
                                             <p>{pokemon.defence}</p>
-                                            <p>{pokemon.special_attack}</p>
-                                            <p>{pokemon.special_defense}</p>
                                         </td>
                                     </tr>
                                 </tbody>
