@@ -52,7 +52,7 @@ function RandomPokemonProfile() {
             .then(response => {
                 getPokemon(response.data);
                 getLatestCry(response.data.sound);
-                console.log(response.data);
+                console.log(response.data.abilities);
             })
             .catch(error => {
                 console.error(error);
