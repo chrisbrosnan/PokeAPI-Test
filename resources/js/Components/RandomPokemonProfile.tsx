@@ -45,6 +45,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
         axios.get(`/api/pokemon/` + id)
             .then(response => {
                 getPokemon(response.data);
+                console.log(response.data);
                 getLatestCry(response.data.sound);
             })
             .catch(error => {
