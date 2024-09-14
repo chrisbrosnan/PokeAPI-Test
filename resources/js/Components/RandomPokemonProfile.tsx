@@ -64,7 +64,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
 
     return (
         <div>
-            <div className="xs:w-full sm:w-3/4 mx-auto">
+            <div className="w-full mx-auto">
                 <div className="text-center">
                     <h3 className="text-5xl py-4 font-black">{_.capitalize(pokemon.name)}</h3>
                 </div>
