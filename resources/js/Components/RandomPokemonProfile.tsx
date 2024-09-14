@@ -66,17 +66,17 @@ function RandomPokemonProfile({ id }: { id: number }) {
         <div>
             <div className="xs:w-full sm:w-3/4 mx-auto">
                 <div className="text-center">
-                    <h3 className="text-5xl py-4 font-black">{_.capitalize(pokemon.name)}</h3>
+                    <h3 className="text-5xl py-4 font-black">{_.capitalize(name)}</h3>
                 </div>
                 <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 pt-4 xs:w-full sm:w-3/4 mx-auto">
                     <div className="left">
                         <div className="text-center">
                             <picture>
-                                <img className="mx-auto mb-4 w-full border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.image} alt={pokemon.name + ' picture'} />
+                                <img className="mx-auto mb-4 xs:w-full sm:w-3/4 border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={name + ' picture'} />
                             </picture>
                         </div>
                         <div>
-                            <table className="mx-auto mb-4 w-full rounded rounded-lg bg-sky-400 px-3">
+                            <table className="mx-auto mb-4 xs:full sm:w-2/3 rounded rounded-lg bg-sky-400 px-3">
                                 <tbody>
                                     <tr>
                                         <td colSpan={2} className="px-6 pt-4 align-top font-black text-center underline">Stats:</td>
@@ -101,7 +101,7 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                     </tr>
                                 </tbody>
                             </table>
-                            <table className="mx-auto mb-4 w-full xs:text-xs">
+                            <table className="mx-auto mb-4 xs:w-full sm:w-3/4  xs:text-xs">
                                 <tbody>
                                     <tr>
                                         <td className="py-1 px-3 font-black underline">Height:</td>
@@ -175,28 +175,28 @@ function RandomPokemonProfile({ id }: { id: number }) {
                                                     <p>Front Default: <br />
                                                     <picture>
                                                         <source srcSet={pokemon.sprites.front_default} type="image/webp" />
-                                                        <img className="mx-auto" src="https://placehold.co/100x100" alt={pokemon.name + ' front'} />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
                                                     </picture></p>
                                                 </td>
                                                 <td>
                                                     <p>Front Shiny: <br />
                                                     <picture>
                                                         <source srcSet={pokemon.sprites.back_default} type="image/webp" />
-                                                        <img className="mx-auto" src="https://placehold.co/100x100" alt={pokemon.name + ' front'} />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
                                                     </picture></p>
                                                 </td>
                                                 <td>
                                                     <p>Back Default: <br />
                                                     <picture>
                                                         <source srcSet={pokemon.sprites.front_shiny} type="image/webp" />
-                                                        <img className="mx-auto" src="https://placehold.co/100x100" alt={pokemon.name + ' front'} />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
                                                     </picture></p>
                                                 </td>
                                                 <td>
                                                     <p>Back Shiny: <br />
                                                     <picture>
                                                         <source srcSet={pokemon.sprites.back_shiny} type="image/webp" />
-                                                        <img className="mx-auto" src="https://placehold.co/100x100" alt={pokemon.name + ' front'} />
+                                                        <img className="mx-auto" src="https://placehold.co/75x75" alt={pokemon.name + ' front'} />
                                                     </picture></p>
                                                 </td>
                                             </tr>
