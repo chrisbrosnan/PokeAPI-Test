@@ -34,6 +34,7 @@ class PokemonController extends Controller
             $pokemon->speed           = $data['stats'][5]['base_stat'];
             $pokemon->moves           = $data['moves'];
             $pokemon->sprites         = $data['sprites'];
+            $pokemon->soundex         = $data['cries']['latest'];
 
             $pokemon->save();
         }
