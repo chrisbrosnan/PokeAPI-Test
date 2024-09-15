@@ -21,7 +21,7 @@ function PokemonCard({ id, name }: CardProps) {
     const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
     useEffect(() => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+        axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/${name}`)
             .then(response => {
                 setPokemon(response.data);
             })
