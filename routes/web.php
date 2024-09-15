@@ -34,15 +34,6 @@ Route::get('/random', function () {
     ]);
 })->name('random');
 
-Route::get('/search', function () {
-    return Inertia::render('Welcome', [
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-        'appName' => config('app.name'),
-        'devName' => config('app.developer'),
-    ]);
-})->name('search');
-
 Route::get('/profile/{name}', function () {
     return Inertia::render('Profile', [
         'laravelVersion' => Application::VERSION,
