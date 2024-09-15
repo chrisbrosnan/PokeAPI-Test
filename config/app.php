@@ -13,7 +13,8 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'PokeAPI Test'),
+    'developer' => env('APP_DEVELOPER', 'Chris Brosnan'),
 
     /*
     |--------------------------------------------------------------------------

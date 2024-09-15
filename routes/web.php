@@ -12,7 +12,7 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
-        'devName' => 'Chris Brosnan'
+        'devName' => config('app.developer'),
     ]);
 });
 
@@ -21,7 +21,7 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
-        'devName' => 'Chris Brosnan'
+        'devName' => config('app.developer'),
     ]);
 })->name('all');
 
@@ -30,7 +30,7 @@ Route::get('/random', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
-        'devName' => 'Chris Brosnan'
+        'devName' => config('app.developer'),
     ]);
 })->name('random');
 
@@ -39,7 +39,7 @@ Route::get('/search', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
-        'devName' => 'Chris Brosnan'
+        'devName' => config('app.developer'),
     ]);
 })->name('search');
 
@@ -48,7 +48,7 @@ Route::get('/profile/{name}', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
-        'devName' => 'Chris Brosnan'
+        'devName' => config('app.developer'),
     ]);
 })->name('profile');
 
