@@ -13,6 +13,7 @@ interface Pokemon {
     sprites: { front_default: string };
     name: string;
     hp: number;
+    image: string;
     height: number;
     weight: number;
     abilities: { ability: { name: string } }[];
@@ -49,7 +50,7 @@ function PokemonCard({ id, name }: CardProps) {
                 </Link>
                 <div>
                     <Link href={route('profile', { name: name })}>
-                        <img className="bg-white w-full mx-auto mb-2 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.sprites.front_default} alt={pokemon.name + ' card'} />
+                        <img className="bg-white w-full mx-auto mb-2 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.image} alt={pokemon.name + ' card'} />
                     </Link>
                 </div>
                 <div>
