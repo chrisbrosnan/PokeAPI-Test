@@ -3,7 +3,7 @@ import Navigation from '@/Components/Navigation';
 import PokemonRandom from '@/Components/PokemonRandom';
 import Footer from '@/Components/Footer';
 
-export default function Random({ appName, laravelVersion, phpVersion, devName, apiUrl }) {
+export default function Random({ appName, laravelVersion, phpVersion, devName }) {
     return (
         <>
             <Head title="PokeAPI Test - Random Pokemon" />
@@ -14,7 +14,7 @@ export default function Random({ appName, laravelVersion, phpVersion, devName, a
 
                             <main className="py-8 px-6 bg-gradient-to-r from-cyan-500 to-green-500">
                                 <div className="p-4 bg-white rounded-md text-black">
-                                    <PokemonRandom apiUrl={apiUrl} />
+                                    <PokemonRandom />
                                 </div>
                             </main>
 
