@@ -54,7 +54,7 @@ function PokemonCard({ id, name }: CardProps) {
                     </Link>
                 </div>
                 <div>
-                    <table className="text-xs sm:w-full xs:w-full mx-auto text-center mb-2">
+                    <table className="text-xs w-full mx-auto text-center mb-2">
                         <tbody>
                             <tr>
                                 <td><span className="font-black">Height:</span><br />{pokemon.height}</td>
