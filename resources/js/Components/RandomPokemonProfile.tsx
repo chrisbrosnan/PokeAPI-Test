@@ -6,6 +6,7 @@ import AudioBlock from './AudioBlock';
 // Define the interface for the Pokemon data
 interface Pokemon {
     name: string;
+    apiUrl: string;
     sprites: {
         front_default: string;
         front_shiny: string;
@@ -43,12 +44,12 @@ interface Pokemon {
     };
 }
 
-function RandomPokemonProfile({ id }: { id: number }) {
+function RandomPokemonProfile({ apiUrl, id }: { apiUrl: string, id: number }) {
     const [pokemon, getPokemon] = useState<Pokemon | null>(null);
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
-        axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/` + id)
+        axios.get(apiUrl + `/pokemon/` + id)
             .then(response => {
                 getPokemon(response.data);
                 getLatestCry(response.data.sound);

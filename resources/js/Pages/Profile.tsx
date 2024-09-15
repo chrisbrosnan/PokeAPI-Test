@@ -3,7 +3,9 @@ import PokemonProfile from '@/Components/PokemonProfile';
 import Navigation from '@/Components/Navigation';
 import Footer from '@/Components/Footer';
 
-export default function Profile({ appName, laravelVersion, phpVersion, devName }) {
+
+
+export default function Profile({ appName, laravelVersion, phpVersion, devName, apiUrl }) {
     const pokemon_name = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 
     return (
@@ -16,7 +18,7 @@ export default function Profile({ appName, laravelVersion, phpVersion, devName }
 
                         <main className="py-8 px-6 bg-gradient-to-r from-cyan-500 to-green-500">
                             <div className="p-4 bg-white rounded-md text-black">
-                                <PokemonProfile name={pokemon_name} />
+                                <PokemonProfile apiUrl={apiUrl} name={pokemon_name} />
                             </div>
                         </main>
 

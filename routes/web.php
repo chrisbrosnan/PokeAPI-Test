@@ -31,6 +31,7 @@ Route::get('/random', function () {
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
         'devName' => config('app.developer'),
+        'apiUrl' => config('app.url'),
     ]);
 })->name('random');
 
@@ -40,6 +41,7 @@ Route::get('/profile/{name}', function () {
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
         'devName' => config('app.developer'),
+        'apiUrl' => config('app.url'),
     ]);
 })->name('profile');
 
