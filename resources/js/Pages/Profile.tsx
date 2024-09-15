@@ -3,7 +3,7 @@ import PokemonProfile from '@/Components/PokemonProfile';
 import Navigation from '@/Components/Navigation';
 import Footer from '@/Components/Footer';
 
-export default function Profile() {
+export default function Profile({ appName, laravelVersion, phpVersion, devName }) {
     const pokemon_name = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 
     return (
@@ -20,7 +20,7 @@ export default function Profile() {
                             </div>
                         </main>
 
-                        <Footer/>
+                        <Footer appName={appName} laravelVersion={laravelVersion} phpVersion={phpVersion} devName={devName} />
                     </div>
                 </div>
             </div>
