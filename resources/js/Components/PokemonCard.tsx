@@ -50,7 +50,7 @@ function PokemonCard({ id, name }: CardProps) {
                 </Link>
                 <div>
                     <Link href={route('profile', { name: name })}>
-                        <img className="bg-white sm:w-full xs:w-3/4 mx-auto mb-2 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.sprites.front_default} alt={pokemon.name + ' card'} />
+                        <img className="bg-white w-full mx-auto mb-2 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.sprites.front_default} alt={pokemon.name + ' card'} />
                     </Link>
                 </div>
                 <div>
