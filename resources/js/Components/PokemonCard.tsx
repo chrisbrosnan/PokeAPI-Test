@@ -12,8 +12,6 @@ interface Pokemon {
     stats: { base_stat: number }[];
     sprites: { front_default: string };
     name: string;
-    hp: number;
-    image: string;
     height: number;
     weight: number;
     abilities: { ability: { name: string } }[];
@@ -23,7 +21,7 @@ function PokemonCard({ id, name }: CardProps) {
     const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
     useEffect(() => {
-        axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/${name}`)
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
             .then(response => {
                 setPokemon(response.data);
             })
@@ -36,6 +34,8 @@ function PokemonCard({ id, name }: CardProps) {
         return <div>Loading...</div>;
     }
 
+    const stats_array = pokemon.stats.map(stat => stat.base_stat);
+
     return (
         <div className="sm:w-full xs:w-3/4 px-3">
             <div className="border border-2 rounded-lg px-4 bg-yellow-200 mb-3">
@@ -43,14 +43,14 @@ function PokemonCard({ id, name }: CardProps) {
                     <div className="text-center">
                         <h3 className="xs:text-2xl sm:text-sm py-2 font-black">{_.capitalize(name)}
                             <span className="float-right text-red-600 font-black">
-                                {pokemon.hp}
+                                {stats_array[0]}
                             </span>
                         </h3>
                     </div>
                 </Link>
                 <div>
                     <Link href={route('profile', { name: name })}>
-                        <img className="bg-white w-full mx-auto mb-2 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.image} alt={pokemon.name + ' card'} />
+                        <img className="bg-white w-full mx-auto mb-2 border-dotted border-2 border-sky-400 rounded-md" src={pokemon.sprites.front_default} alt={pokemon.name + ' card'} />
                     </Link>
                 </div>
                 <div>
@@ -66,7 +66,7 @@ function PokemonCard({ id, name }: CardProps) {
                 <div className="text-xs my-4 h-12 sm:w-full xs:w-3/4 mx-auto">
                     <p className="font-black">Abilities: </p>
                     {pokemon.abilities.map((item, index) => (
-                        <p key={index}>{_.capitalize(item.ability.name)}</p>
+                        <span key={index}><em>{_.capitalize(item.ability.name) + ', '}</em></span>
                     ))}
                 </div>
                 <div className="text-sm mb-4 text-center">
