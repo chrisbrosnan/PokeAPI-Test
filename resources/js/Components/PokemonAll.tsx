@@ -4,7 +4,7 @@ import _ from 'lodash';
 import PokemonCard from './PokemonCard';
 import Pagination from './Pagination';
 
-function PokemonAll() {
+function PokemonAll({apiUrl}: {apiUrl: string}) {
     const [pokemon, getPokemon] = useState([]);
     const [page, setPage]       = useState(1);
     var limit : number          = Number(page * 50);
@@ -41,7 +41,7 @@ function PokemonAll() {
             <Suspense fallback={'Loading Pokemon!'}>
                 <div className="sm:grid-cols-5 xs:grid-cols-2 grid">
                     {to_be_rendered.map((item, index) => (
-                        <PokemonCard key={index + 1} id={index + 1} name={item} />
+                        <PokemonCard apiUrl={apiUrl} key={index + 1} id={index + 1} name={item} />
                     ))}
                 </div>
             </Suspense>

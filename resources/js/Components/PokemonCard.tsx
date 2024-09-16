@@ -5,6 +5,7 @@ import { Link } from '@inertiajs/react';
 
 interface CardProps {
     id: number;
+    apiUrl: string;
     name: string;
 }
 
@@ -17,11 +18,11 @@ interface Pokemon {
     abilities: { ability: { name: string } }[];
 }
 
-function PokemonCard({ id, name }: CardProps) {
+function PokemonCard({ apiUrl, id, name }: CardProps) {
     const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
     useEffect(() => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+        axios.get(apiUrl + `/v2/pokemon/${name}`)
             .then(response => {
                 setPokemon(response.data);
             })

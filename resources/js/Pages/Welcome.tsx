@@ -3,7 +3,7 @@ import PokemonAll from '@/Components/PokemonAll';
 import Navigation from '@/Components/Navigation';
 import Footer from '@/Components/Footer';
 
-export default function Welcome({ appName, laravelVersion, phpVersion, devName }) {
+export default function Welcome({ appName, laravelVersion, phpVersion, devName, apiUrl }) {
     return (
         <>
             <Head title="PokeAPI Test - Home" />
@@ -14,7 +14,7 @@ export default function Welcome({ appName, laravelVersion, phpVersion, devName }
                         
                         <main className="py-8 px-6 bg-gradient-to-r from-cyan-500 to-green-500">
                             <div className="p-4 bg-white rounded-md text-black sm:w-3/4 mx-auto xs:w-full">
-                                <PokemonAll />
+                                <PokemonAll apiUrl={apiUrl} />
                             </div>
                         </main>
 

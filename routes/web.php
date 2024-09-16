@@ -13,6 +13,7 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
         'devName' => config('app.developer'),
+        'apiUrl' => config('app.api_url'),
     ]);
 });
 
@@ -22,6 +23,7 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
         'devName' => config('app.developer'),
+        'apiUrl' => config('app.api_url'),
     ]);
 })->name('all');
 
@@ -31,7 +33,7 @@ Route::get('/random', function () {
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
         'devName' => config('app.developer'),
-        'apiUrl' => config('app.url'),
+        'apiUrl' => config('app.api_url'),
     ]);
 })->name('random');
 
@@ -41,7 +43,7 @@ Route::get('/profile/{name}', function () {
         'phpVersion' => PHP_VERSION,
         'appName' => config('app.name'),
         'devName' => config('app.developer'),
-        'apiUrl' => config('app.url'),
+        'apiUrl' => config('app.api_url'),
     ]);
 })->name('profile');
 

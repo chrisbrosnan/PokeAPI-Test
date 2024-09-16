@@ -43,7 +43,7 @@ interface Pokemon {
     };
 }
 
-function RandomPokemonProfile({ id }: { id: number }) {
+function RandomPokemonProfile({ apiUrl, id }: { apiUrl: string, id: number }) {
     const [pokemon, getPokemon] = useState<Pokemon | null>(null);
     const [latest_cry, getLatestCry] = useState('');
 

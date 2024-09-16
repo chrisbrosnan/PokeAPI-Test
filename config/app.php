@@ -53,7 +53,8 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://blissful-goodall.18-135-101-14.plesk.page/api'),
+    'url' => env('APP_URL', 'http://localhost'),
+    'api_url' => env('API_URL', 'https://blissful-goodall.18-135-101-14.plesk.page/api'),
 
     /*
     |--------------------------------------------------------------------------
