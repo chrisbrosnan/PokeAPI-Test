@@ -52,7 +52,7 @@ function PokemonProfile({ apiUrl, name }: { apiUrl: string, name: string }) {
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
-        axios.get(apiUrl + `/profile/name/` + name)
+        axios.get(apiUrl + `/pokemon/name/` + name)
             .then(response => {
                 getPokemon(response.data);
                 getLatestCry(response.data.sound);
