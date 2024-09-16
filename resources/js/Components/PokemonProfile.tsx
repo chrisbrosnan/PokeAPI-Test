@@ -5,6 +5,7 @@ import AudioBlock from './AudioBlock';
 
 interface Pokemon {
     name: string; 
+    image: string;
     hp: number;
     attack: number;
     defense: number;
@@ -76,7 +77,7 @@ function PokemonProfile({ apiUrl, name }: { apiUrl: string, name: string }) {
                     <div className="left">
                         <div className="text-center">
                             <picture>
-                                <img className="mx-auto mb-4 w-full border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={name + ' picture'} />
+                                <img className="mx-auto mb-4 w-full border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.image} alt={name + ' picture'} />
                             </picture>
                         </div>
                         <div>
