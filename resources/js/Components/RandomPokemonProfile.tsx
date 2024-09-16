@@ -48,7 +48,7 @@ function RandomPokemonProfile({ apiUrl, id }: { apiUrl: string, id: number }) {
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
-        axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/` + id)
+        axios.get(apiUrl + `/` + id)
             .then(response => {
                 getPokemon(response.data);
                 getLatestCry(response.data.sound);
