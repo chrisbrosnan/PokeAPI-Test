@@ -8,7 +8,6 @@ interface Pokemon {
     hp: number;
     attack: number;
     defense: number;
-    image: string;
     special_attack: number;
     special_defense: number;
     speed: number;
@@ -53,7 +52,7 @@ function PokemonProfile({ apiUrl, name }: { apiUrl: string, name: string }) {
     const [latest_cry, getLatestCry] = useState('');
 
     useEffect(() => {
-        axios.get(apiUrl + `/pokemon/name/` + name)
+        axios.get(`https://blissful-goodall.18-135-101-14.plesk.page/api/pokemon/name/` + name)
             .then(response => {
                 getPokemon(response.data);
                 getLatestCry(response.data.sound);
@@ -77,7 +76,7 @@ function PokemonProfile({ apiUrl, name }: { apiUrl: string, name: string }) {
                     <div className="left">
                         <div className="text-center">
                             <picture>
-                                <img className="mx-auto mb-4 w-full border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.image} alt={name + ' picture'} />
+                                <img className="mx-auto mb-4 w-full border-dotted border-2 border-sky-400 rounded-lg" src={pokemon.sprites.front_default} alt={name + ' picture'} />
                             </picture>
                         </div>
                         <div>
