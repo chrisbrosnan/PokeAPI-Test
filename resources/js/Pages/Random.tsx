@@ -6,7 +6,7 @@ import Footer from '@/Components/Footer';
 export default function Random({ appName, laravelVersion, phpVersion, devName, apiUrl }) {
     return (
         <>
-            <Head title="PokeAPI Test - Random Pokemon" />
+            <Head title={appName + ' by ' + devName} />
             <div className="bg-gray-50 text-black/50">
                 <div className="relative min-h-screen flex flex-col selection:bg-[#FF2D20] selection:text-white">
                     <div className="relative w-full">

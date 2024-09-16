@@ -8,7 +8,7 @@ export default function Profile({ appName, laravelVersion, phpVersion, devName, 
 
     return (
         <>
-        <Head title="PokeAPI Test - Pokemon Profile" />
+        <Head title={appName + ' by ' + devName} />
             <div className="bg-gray-50 text-black/50">
                 <div className="relative min-h-screen flex flex-col selection:bg-[#FF2D20] selection:text-white">
                     <div className="relative w-full">
