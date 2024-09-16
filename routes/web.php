@@ -50,12 +50,12 @@ Route::get('/profile/{name}', function () {
 Route::prefix('/api')->group(function () {
     Route::get('/import', [PokemonController::class, 'import'])
         ->name('import'); 
-    Route::get('/pokemon', [PokemonController::class, 'index'])
-        ->name('pokemon');
     Route::get('/pokemon/{id}', [PokemonController::class, 'show'])
         ->name('pokemon.show');
     Route::get('/pokemon/name/{name}', [PokemonController::class, 'get_by_name'])
         ->name('pokemon.get_by_name');
     Route::get('/pokemon/random', [PokemonController::class, 'random'])
         ->name('pokemon.random');
+    Route::get('/pokemon', [PokemonController::class, 'index'])
+        ->name('pokemon');
 })->middleware(Cors::class);

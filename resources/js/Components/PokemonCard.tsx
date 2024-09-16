@@ -55,7 +55,7 @@ function PokemonCard({ apiUrl, id, name }: CardProps) {
                     </Link>
                 </div>
                 <div>
-                    <table className="text-xs w-full mx-auto text-center mb-2">
+                    <table className="text-sm w-full mx-auto text-center mb-2">
                         <tbody>
                             <tr>
                                 <td><span className="font-black">Height:</span><br />{pokemon.height}</td>
@@ -64,7 +64,7 @@ function PokemonCard({ apiUrl, id, name }: CardProps) {
                         </tbody>
                     </table>
                 </div>
-                <div className="text-xs my-4 h-12 sm:w-full xs:w-3/4 mx-auto">
+                <div className="text-sm my-4 h-16 sm:w-full xs:w-3/4 mx-auto">
                     <p className="font-black">Abilities: </p>
                     {pokemon.abilities.map((item, index) => (
                         <span key={index}><em>{_.capitalize(item.ability.name) + ', '}</em></span>
